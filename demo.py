@@ -1,14 +1,17 @@
+import os
 import torch
 from torch.autograd import Variable
 import utils
 import dataset
 from PIL import Image
-
 import models.crnn as crnn
 
+image_dir = 'data/images'
+image_paths = os.listdir(image_dir)
+full_path = os.path.join('data/images/', image_paths[0])
 
 model_path = './data/crnn.pth'
-img_path = './data/0.12.png'
+#img_path = './data/0.12.png'
 alphabet = '0123456789abcdefghijklmnopqrstuvwxyz'
 
 model = crnn.CRNN(32, 1, 37, 256)
