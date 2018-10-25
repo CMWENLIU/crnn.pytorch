@@ -1,0 +1,5 @@
+python 3.5.5
+pip install torch \\version is 0.4.1
+pip install torchvision \\version is 0.2.1
+pip install lmdb \\0.94
+then python demo.py get result.
